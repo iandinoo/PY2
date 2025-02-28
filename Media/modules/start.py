@@ -41,7 +41,7 @@ API_CREATE_QRIS = "http://qris.autsc.my.id/api/create"
 API_CHECK_PAYMENT = "https://mutasiv2.vercel.app/check-payment"
 
 async def generate_unique_ref_id():
-    return 'DCAS' + uuid.uuid4().hex[:16].upper()
+    return 'DCAS - ' + uuid.uuid4().hex[:16].upper()
 
 @bot.on_message(filters.command("start") & filters.private)
 async def start(client, message):
